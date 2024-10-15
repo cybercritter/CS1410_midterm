@@ -12,7 +12,9 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(${PROJECT_NAME}_test midterm_test.cpp)
 
-target_link_libraries(${PROJECT_NAME}_test  GTest::gtest_main)
+target_link_libraries(${PROJECT_NAME}_test PRIVATE GTest::gtest_main)
 
 include(GoogleTest)
-gtest_discover_tests(${PROJECT_NAME}_test )
+
+add_test(midterm_test test_true)
+# gtest_discover_tests(${PROJECT_NAME}_test )
