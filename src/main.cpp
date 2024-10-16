@@ -1,8 +1,12 @@
-#include <iostream>
+#include <helper_functions.h>
+#include <student_record.h>
 
-int main(int argc, char** argv)
+using std::cout;
+
+int
+main ()
 {
-    std::cout << "Hello CS1410!!" << std::endl;
-    return 0;
-
+  cout << "Welcome to my midterm project!\n";
+  cs1410_midterm::draw_table_header (TERMINAL_WIDTHS::EXTENDED);
+  return 0;
 }

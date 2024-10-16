@@ -1,9 +1,14 @@
 enable_testing()
 include(FetchContent)
 
+# Avoid warning about DOWNLOAD_EXTRACT_TIMESTAMP in CMake 2.24:
+if(CMAKE_VERSION VERSION_GREATER_EQUAL "3.24.0")
+  cmake_policy(SET CMP0135 NEW)
+endif()
+
 FetchContent_Declare(
     googletest
-    URL https://github.com/google/googletest/archive/v1.14.0.zip
+    URL https://github.com/google/googletest/archive/v1.15.2.zip
 )
 
 # For Windows: Prevent overriding the parent project's compiler/linker settings

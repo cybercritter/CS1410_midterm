@@ -26,5 +26,7 @@
         }
       }
     ]
-  }
+  },
+  "editor.formatOnSave": true,
+  "files.autoSaveWhenNoErrors": true
 }
