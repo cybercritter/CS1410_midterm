@@ -1,7 +1,7 @@
 #pragma once
 
 #include <map>
-#include <sstream>
+#include <iostream>
 #include <string>
 #include <types.h>
 
@@ -10,6 +10,7 @@ namespace cs1410_midterm {
     using std::map;
     using std::string;
     using std::stringstream;
+    using std::istream;
 
     class StudentRecord {
         public:
@@ -25,6 +26,11 @@ namespace cs1410_midterm {
         constexpr double get_student_gpa() const;
 
         void set_student_grade(const double grade);
+
+         friend istream& operator>>(istream& is, StudentRecord& rec){
+            is >>
+            return is;
+        }
 
         private:
         double overall_gpa{0};

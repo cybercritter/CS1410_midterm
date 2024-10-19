@@ -2,11 +2,12 @@
 #include <student_record.h>
 
 using std::cout;
+using namespace cs1410_midterm;
 
 int
 main ()
 {
   cout << "Welcome to my midterm project!\n";
-  cs1410_midterm::draw_table_header (TERMINAL_WIDTHS::EXTENDED);
+  draw_table_header (get_terminal_width());
   return 0;
 }
