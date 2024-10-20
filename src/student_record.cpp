@@ -1,26 +1,38 @@
+#include <string>
+
+using namespace std;
+
 #include <student_record.h>
 
-
-namespace cs1410_midterm {
-
-    string StudentRecord::get_student_name() const {
-        string name{};
-        return name;
-    }
-
-    string StudentRecord::get_grade() const{
-        string grade{};
-        return grade;
-
-    }
-
-    constexpr double StudentRecord::get_student_gpa() const {
-        double gpa{3.14};
-        return gpa;
-    }
-
-    void StudentRecord::set_student_grade(const double grade){
-        overall_gpa = grade;
-    }
+char
+StudentRecord::get_letter_grade ()
+{
+  throw "Not yet implemented";
 }
 
+string
+StudentRecord::get_student_name ()
+{
+  throw "Not yet implemented";
+}
+
+string
+StudentRecord::get_grade ()
+{
+  throw "Not yet implemented";
+}
+
+constexpr double
+StudentRecord::get_student_gpa ()
+{
+
+  const double data = 0.0;
+
+  return data;
+}
+
+void
+StudentRecord::set_student_grade (const double grade)
+{
+  throw "Not yet implemented";
+}

@@ -1,0 +1,10 @@
+#ifndef TERMINAL_WIDTHS_H
+#define TERMINAL_WIDTHS_H
+
+enum TERMINAL_WIDTHS {
+	UNDEFINED, 
+	STANDARD, 
+	EXTENDED
+};
+
+#endif
