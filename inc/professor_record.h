@@ -9,24 +9,23 @@
  *
  * This class holds information about a professor, including their department.
  */
-class ProfessorRecord : public Record
-{
-public:
+class ProfessorRecord : public Record {
+ public:
   /**
    * @brief Default constructor for the ProfessorRecord class.
    *
    * Initializes an empty professor record.
    */
-  ProfessorRecord () = default;
+  ProfessorRecord() = default;
 
   /**
    * @brief Destructor for the ProfessorRecord class.
    *
    * Cleans up any resources used by the professor record.
    */
-  ~ProfessorRecord () = default;
+  ~ProfessorRecord() = default;
 
-private:
+ private:
   /**
    * @brief The department to which the professor belongs.
    *

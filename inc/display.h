@@ -1,9 +1,10 @@
 
 #pragma once
 
+#include <iostream>
+
 #include "class_record.h"
 #include "student_record.h"
-#include <iostream>
 
 /**
  * @class Menu
@@ -11,9 +12,8 @@
  *        menu options, including operations related to student and class
  * records.
  */
-class Display
-{
-public:
+class Display {
+ public:
   /**
    * @brief Overloaded output stream operator for the Menu class.
    *
@@ -26,9 +26,7 @@ public:
    * @throw A string exception indicating that the function is not yet
    * implemented.
    */
-  friend std::ostream &
-  operator<< (std::ostream &ostream, Display &display)
-  {
+  friend std::ostream &operator<<(std::ostream &ostream, Display &display) {
     throw "Not yet implemented";
   }
 
@@ -44,9 +42,7 @@ public:
    * @throw A string exception indicating that the function is not yet
    * implemented.
    */
-  friend std::istream &
-  operator>> (std::istream &in, Display &display)
-  {
+  friend std::istream &operator>>(std::istream &in, Display &display) {
     throw "Not yet implemented";
   }
 
@@ -56,9 +52,9 @@ public:
    * This function outputs a table showing information related to student and
    * class records.
    */
-  void display_table ();
+  void display_table();
 
-private:
+ private:
   /**
    * @brief A record of the student associated with the menu.
    *

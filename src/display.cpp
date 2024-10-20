@@ -1,5 +1,6 @@
-#include <cstdint>
 #include <display.h>
+
+#include <cstdint>
 #include <iomanip>
 
 using namespace std;
@@ -8,55 +9,39 @@ constexpr int STANDARD_TERMINAL_WIDTH = 80;
 constexpr int EXTENDED_TERMINAL_WIDTH = 100;
 constexpr int TERMINAL_WIDTH_UNDEFINED = 0;
 
-enum class TERMINAL_WIDTHS
-{
-  UNDEFINED,
-  STANDARD,
-  EXTENDED
-};
+enum class TERMINAL_WIDTHS { UNDEFINED, STANDARD, EXTENDED };
 
-inline void
-draw_seperator (TERMINAL_WIDTHS w)
-{
-  uint16_t term_w{ 0 };
+inline void draw_seperator(TERMINAL_WIDTHS w) {
+  uint16_t term_w{0};
 
-  if (w != TERMINAL_WIDTHS::UNDEFINED)
-    {
-      switch (w)
-        {
-        case TERMINAL_WIDTHS::STANDARD:
-          term_w = STANDARD_TERMINAL_WIDTH;
-          break;
-        case TERMINAL_WIDTHS::EXTENDED:
-          term_w = EXTENDED_TERMINAL_WIDTH;
-          break;
-        default:
-          term_w = TERMINAL_WIDTH_UNDEFINED;
-          break;
-        }
-
-      for (int iter{ 0 }; iter < term_w; ++iter)
-        {
-          cout << "-";
-        }
+  if (w != TERMINAL_WIDTHS::UNDEFINED) {
+    switch (w) {
+      case TERMINAL_WIDTHS::STANDARD:
+        term_w = STANDARD_TERMINAL_WIDTH;
+        break;
+      case TERMINAL_WIDTHS::EXTENDED:
+        term_w = EXTENDED_TERMINAL_WIDTH;
+        break;
+      default:
+        term_w = TERMINAL_WIDTH_UNDEFINED;
+        break;
     }
+
+    for (int iter{0}; iter < term_w; ++iter) {
+      cout << "-";
+    }
+  }
   cout << endl;
 }
 
-inline void
-draw_table_header (TERMINAL_WIDTHS w)
-{
-  draw_seperator (w);
+inline void draw_table_header(TERMINAL_WIDTHS w) {
+  draw_seperator(w);
 
-  cout << left << setw (15) << "Course ID " << left << setw (50)
-       << "Course Description" << left << setw (15) << "Professor" << left
-       << setw (15) << "Grade" << endl;
+  cout << left << setw(15) << "Course ID " << left << setw(50)
+       << "Course Description" << left << setw(15) << "Professor" << left
+       << setw(15) << "Grade" << endl;
 
-  draw_seperator (w);
+  draw_seperator(w);
 }
 
-void
-Display::display_table ()
-{
-  draw_table_header (TERMINAL_WIDTHS::EXTENDED);
-}
+void Display::display_table() { draw_table_header(TERMINAL_WIDTHS::EXTENDED); }

@@ -15,14 +15,15 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(cli)
 
+
 add_executable(${PROJECT_NAME} ${CODE_DIRECTORY}/main.cpp)
-target_sources(${PROJECT_NAME} PUBLIC ${CODE_DIRECTORY}/class_record.cpp
-    ${CODE_DIRECTORY}/student_record.cpp
-    ${CODE_DIRECTORY}/display.cpp
-)
+
+target_sources(
+  ${PROJECT_NAME}
+  PUBLIC ${CODE_DIRECTORY}/class_record.cpp
+         ${CODE_DIRECTORY}/student_record.cpp ${CODE_DIRECTORY}/display.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC inc)
+# target_link_libraries(${PROJECT_NAME} PRIVATE cli::cli)
 target_link_libraries(${PROJECT_NAME} PRIVATE cli::cli)
-
-
 add_subdirectory(test)
