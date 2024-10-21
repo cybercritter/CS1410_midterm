@@ -13,7 +13,6 @@ using std::endl;
 using std::left;
 using std::setw;
 
-namespace cs1410_midterm {
 inline TERMINAL_WIDTHS get_terminal_width() {
   struct winsize w;
   ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
@@ -50,10 +49,8 @@ inline void draw_seperator(TERMINAL_WIDTHS w) {
 inline void draw_table_header(TERMINAL_WIDTHS w) {
   draw_seperator(w);
 
-  cout << left << setw(15) << "Course ID " << left << setw(50)
-       << "Course Description" << left << setw(15) << "Professor" << left
-       << setw(8) << "Grade" << endl;
+  cout << left << setw(15) << "Course ID " << left << setw(8)
+     << "Grade" << left << setw(8) << "Letter Grade" << endl;
 
   draw_seperator(w);
 }
-}  // namespace cs1410_midterm

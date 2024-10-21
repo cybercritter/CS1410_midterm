@@ -1,13 +1,35 @@
-// #include <cli/cli.h>
-#include <display.h>
+#include <iostream>
+#include <vector>
 
-using std::cout;
+#include <helper_functions.h>
+#include <StudentRecord.h>
+#include <types.h>
 
 int main(int argc, char **argv) {
-  Display display;
-  display.display_table();
-  cout << "Welcome to my midterm project!\n";
-  // draw_table_header(get_terminal_width());
 
-  return 0;
+  StudentRecord student_rec;
+  std::string name;
+  char exit{};
+
+  TERMINAL_WIDTHS term;
+  std::cout << "Enter Student Name: ";
+  std::cin >> name;
+
+  std::cout << "Welcome to " << name << " records!" << std::endl;
+
+  for (;;) {
+    std::cout << "please enter course information: " << std::endl
+              << "Name  Course Grade (0.0 form)" << std::endl;
+
+    std::cin >> student_rec;
+
+    std::cout << "Exit? [y/n]: ";
+    std::cin >> exit;
+
+    if (exit == 'y' || exit == 'Y') {
+      break;
+    }
+  }
+
+  student_rec.print_records();
 }
