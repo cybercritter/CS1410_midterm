@@ -3,7 +3,6 @@
 #include <types.h>
 
 #include <iostream>
-#include <vector>
 
 /**
  * @brief The main entry point of the student records program.
