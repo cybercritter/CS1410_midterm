@@ -60,7 +60,7 @@ class StudentRecord {
       letter_grade = "C";
     } else if (grade >= 60.0) {
       letter_grade = "D";
-    } else if (grade <= 50.0) {
+    } else if (grade <= 59.0) {
       letter_grade = "F";
     } else {
       letter_grade = "INCOMPLETE";
