@@ -28,6 +28,9 @@ int main(int argc, char **argv) {
 
   std::cout << "Welcome to " << name << " records!" << std::endl;
 
+  /**
+   * The main loop
+   */
   for (;;) {
     std::cout << "Please enter course information: " << std::endl
               << "Course Name  Course Grade (0.0 form)" << std::endl;

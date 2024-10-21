@@ -7,11 +7,6 @@
 #include <iomanip>
 #include <iostream>
 
-using std::cout;
-using std::endl;
-using std::left;
-using std::setw;
-
 /**
  * @brief Retrieves the current terminal width and returns the appropriate width
  * category.
@@ -57,11 +52,11 @@ inline void draw_seperator(TERMINAL_WIDTHS w) {
     }
 
     for (int iter{0}; iter < term_w; ++iter) {
-      cout << "-";
+      std::cout << "-";
     }
 
     // print new line and flush the buffer
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
@@ -78,8 +73,9 @@ inline void draw_seperator(TERMINAL_WIDTHS w) {
 inline void draw_table_header(TERMINAL_WIDTHS w) {
   draw_seperator(w);
 
-  cout << left << setw(15) << "Course ID " << left << setw(8) << "Grade" << left
-       << setw(8) << "Letter Grade" << endl;
+  std::cout << std::left << std::setw(15) << "Course ID " << std::left
+            << std::setw(8) << "Grade" << std::left << std::setw(8)
+            << "Letter Grade" << std::endl;
 
   draw_seperator(w);
 }
