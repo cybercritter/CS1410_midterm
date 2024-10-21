@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
     std::cout << "Enter another class? [y/n]: ";
     std::cin >> exit;  ///< Ask the user if they want to exit.
 
-    if (exit == 'y' || exit == 'Y') {
+    if (exit == 'n' || exit == 'N') {
       break;  ///< Exit the loop if the user confirms.
     }
   }
