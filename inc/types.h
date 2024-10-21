@@ -1,30 +1,38 @@
 #pragma once
 
-#include <cstdint>
-#include <map>
-#include <sstream>
 #include <string>
 
 using std::string;
 
+/**
+ * @brief The standard terminal width used for display purposes.
+ */
 constexpr int STANDARD_TERMINAL_WIDTH = 80;
+
+/**
+ * @brief The extended terminal width used for display purposes.
+ */
 constexpr int EXTENDED_TERMINAL_WIDTH = 120;
+
+/**
+ * @brief Value used when the terminal width is undefined.
+ */
 constexpr int TERMINAL_WIDTH_UNDEFINED = 0;
 
-enum class TERMINAL_WIDTHS { UNDEFINED, STANDARD, EXTENDED };
-
-namespace cs1410_midterm {
-struct student_record {
-  string name{};
-  double gpa{0.0};
-  char letter_grade{};
+/**
+ * @brief Enum representing different terminal width categories.
+ */
+enum class TERMINAL_WIDTHS {
+  UNDEFINED,  ///< Represents an undefined terminal width.
+  STANDARD,   ///< Represents a standard terminal width.
+  EXTENDED    ///< Represents an extended terminal width.
 };
 
-struct student_class {
-  uint16_t id;
-  string name{};
-  string description{};
+/**
+ * @brief Structure representing a student's record.
+ */
+struct student_record {
+  std::string course_name{};
+  std::string letter_grade{};
   double grade{0.0};
 };
-
-}  // namespace cs1410_midterm
