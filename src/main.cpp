@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 
   for (;;) {
     std::cout << "please enter course information: " << std::endl
-              << "Name  Course Grade (0.0 form)" << std::endl;
+              << "Course Name  Course Grade (0.0 form)" << std::endl;
 
     std::cin >> student_rec;
 
