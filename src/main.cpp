@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
 
     std::cin >> student_rec;  ///< Input course name and grade into student_rec.
 
-    std::cout << "Exit? [y/n]: ";
+    std::cout << "Enter another class? [y/n]: ";
     std::cin >> exit;  ///< Ask the user if they want to exit.
 
     if (exit == 'y' || exit == 'Y') {
