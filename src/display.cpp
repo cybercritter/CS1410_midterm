@@ -1,7 +1,7 @@
-#include <display.h>
-
 #include <cstdint>
 #include <iomanip>
+
+#include <display.h>
 
 using namespace std;
 
@@ -34,7 +34,9 @@ inline void draw_seperator(TERMINAL_WIDTHS w) {
   cout << endl;
 }
 
-inline void draw_table_header(TERMINAL_WIDTHS w) {
+inline TERMINAL_WIDTHS Display::get_terminal_width(); 
+
+inline void Display::draw_table_header(TERMINAL_WIDTHS w) {
   draw_seperator(w);
 
   cout << left << setw(15) << "Course ID " << left << setw(50)

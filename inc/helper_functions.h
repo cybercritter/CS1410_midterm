@@ -1,12 +1,12 @@
 #pragma once
 
-#include <student_record.h>
-#include <sys/ioctl.h>
+#include <iomanip>
+#include <iostream>
+
 #include <types.h>
 #include <unistd.h>
 
-#include <iomanip>
-#include <iostream>
+#include <sys/ioctl.h>
 
 using std::cout;
 using std::endl;

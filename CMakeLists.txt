@@ -23,7 +23,5 @@ target_sources(
   PUBLIC ${CODE_DIRECTORY}/class_record.cpp
          ${CODE_DIRECTORY}/student_record.cpp ${CODE_DIRECTORY}/display.cpp)
 
-target_include_directories(${PROJECT_NAME} PUBLIC inc)
-# target_link_libraries(${PROJECT_NAME} PRIVATE cli::cli)
-target_link_libraries(${PROJECT_NAME} PRIVATE cli::cli)
+target_include_directories(${PROJECT_NAME} PUBLIC "inc")
 add_subdirectory(test)

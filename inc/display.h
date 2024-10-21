@@ -54,6 +54,17 @@ class Display {
    */
   void display_table();
 
+  void draw_table_header(TERMINAL_WIDTHS w);
+
+  inline TERMINAL_WIDTHS get_terminal_width()
+  {
+  struct winsize w;
+  ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+
+  return (w.ws_col < 120) ? TERMINAL_WIDTHS::STANDARD
+                          : TERMINAL_WIDTHS::EXTENDED;
+}
+
  private:
   /**
    * @brief A record of the student associated with the menu.
