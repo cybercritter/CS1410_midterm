@@ -2,7 +2,6 @@
 
 #include <helper_functions.h>
 
-
 #include <iomanip>
 #include <iostream>
 #include <string>
